@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather buddy</title>
+  </head>
+
+  <!-- styling ui  -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+     
+    }
+
+    .wrapper {
+      border: 1px solid white;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .heading {
+      color: teal;
+      font-size: 50px;
+      font-weight: 700;
+    }
+
+    .card {
+      background: teal;
+      padding: 20px;
+      gap: 20px;
+      display: flex;
+      border-radius: 20px;
+    }
+
+    .card input {
+      padding: 10px;
+      border-radius: 20px;
+    }
+    .card input::placeholder {
+      color: blue;
+      font-size: 16px;
+      
+    }
+    .card button {
+      padding: 10px;
+      background: blue;
+      color: white;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+    .card button:hover {
+      background: skyblue;
+    }
+
+    .output{
+        background: teal;
+        padding: 20px;
+        font-size: 20px;
+        color: white;
+        border-radius: 20px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <h1 class="heading">Weather Buddy</h1>
+
+        <div class="card">
+          <input id="weather" type="text" placeholder="input weather" />
+          <button class="button">Add</button>
+        </div>
+        <span class="output"></span>
+      </div>
+    </div>
+  </body>
+
+<script >
+
+let weather=document.getElementById("weather")
+let button =document.querySelector(".button")
+let output = document.querySelector(".output")
+
+ 
+
+button.addEventListener("click",()=>{
+   if(weather.value === "sunny"){
+         output.textContent = "take your sunglasses"
+   }
+   else  if(weather.value === "rainy"){
+      output.textContent="take your umbrella"
+   }
+   else{
+    alert("add something from climate")
+   }
+})
+
+
+
+
+
+
+
+</script>
+
+
+</html>
